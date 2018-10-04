@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <style>
+		body { background-color: #ccffff;}
+		h1 {color: white; text-align: center; font-size:25px;}
+		h2 {color: black; text-align: left;font-size:15px;}
+		p {font-family: DIN Offc; font-size:15px; color:red;}
+		td { font-family: Comic Sans MS; font-size:24px;}		
+		#e1{ color:red; font-size:12px;}
+		.class1  {text-align:center; color: white; font-size:14px;}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: PINK;
+    padding: 14px 16px;
+    background-color: PURPLE;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: YELLOW;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+} 
+</style>
+<head>
+       <title>JC InfoPage</title>
+</head>
+<body>
+
+
+<script>
+function openInfo(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+	// Hide all elements with class="tabcontent" by default */
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+     tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+     document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+} 
+</script>
+
+    <!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'GitHub_C')"><h3>GigHub Info</button>  
+  <button class="tablinks" onclick="openInfo(event, 'Lynda_C')"><h3>Lynda</button>
+  <button class="tablinks" onclick="openInfo(event, 'Learning_C')"><h3>Learning</button>
+</div>
+  
+<div id="GitHub_C" class="tabcontent">
+<h4>GitHub Info.</h4>
+<a href="https://guides.github.com/"  target="_blank"><h4>Guide</a><p>
+<a href="https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD" target="_blank"><h4>videos</a>
+<a href="https://www.atlassian.com/git/tutorials/syncing/git-push" target="_blank"><h4>commands</a>
+<a href="https://stackoverflow.com/questions/8775850/how-do-i-add-files-and-folders-into-github-repos" target="_blank"><h4>beg</a>
+<p>&nbsp
+<a href="https://github.com/login" target="_blank"><h3>GitHub Login</a> 
+<a href="https://codenvy.io/site/login" target="_blank"><h3>Codenvy Login</a> better to login with FireFox
+</div>
+
+<div id="Lynda_C" class="tabcontent">
+    <a href="https://www.lynda.com/portal/sip?org=kcls.org" target="_blank"><h4> Lynda</h4></a>
+    <p><a href="https://kcls.org/students/" target="_blank"><h4> Students Info.</h4></a>
+</div>
+  
+
+<div id="Learning_C" class="tabcontent">
+  <dl>
+    <p><dt>School</dt>
+      <dd><a href="https://weblogin.washington.edu/" target="_blank">UW</a></dd>
+  	  <dd> youtube: &nbsp<a href="https://www.youtube.com/channel/UCll_nlSRML4SRkKeUW50imA" target="_blank">Seattle University Web Development Certificate</a></dd>
+	  <dd><a href="https://webadvisor.seattleu.edu/WAPROD/WebAdvisor?TOKENIDX=3304288053&type=M&constituency=WBST&pid=CORE-WBST">SU</a></dd>
+	  <dd><a href="https://www.seattleu.edu/mysu/" target="_blank">mySU</a></dd>
+	  <dd><a href="https://outlook.office365.com/owa/?realm=seattleu.edu" target="_blank">SU Email</a></dd>
+	  <dd><a href="https://seattleu.instructure.com/" target="_blank">SU Canvas</a></dd>
+	  <dd><a href="https://suwebdev.slack.com/" target="_blank">SU Slack</a></dd>
+	<P><dt>Resource</dt>
+	   <dd> <a href="https://dtanslate.google.com/#auto/zh-TW/" target="_blank">translate</a></dd>
+	   <dd> <a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank">W3schools</a></dd>
+	   <dd> <a href="https://www.safaribooksonline.com/accounts/login/?next=/register-topics/" target="_blank">Safari</a></dd>	   
+	<P><dt>GitHub	</dt>
+	  <dd> <a href="https://github.com/chanjessica" target="_blank">github</a></dd>
+	  <dd> <a href="https://github.com/codenvy" target="_blank">codeny</a></dd>
+	  <dd> <a href="https://validator.w3.org/target="_blank">validator</a></dd>
+	  <dd> <a href="hhttps://stackoverflow.com/questions/8775850/how-do-i-add-files-and-folders-into-github-repos" target="_blank">stackoverflow: add folder into github</a></dd>
+	<P><dt>HTML5</dt>	
+	  <dd> <a href="https://degreed.com/learning#/search?term=HTML5" target="_blank">Degreed</a></Dd>
+	<P><dt>CSS</dt>
+	  <dd> <a href="https://css-dticks.com/bem-101/" target="_blank">css 101</a></dd>	
+	  <dd><a href="https://degreed.com/learning#/search?term=css" target="_blank">Degreed</a><dd>
+	<P><dt>JavaScript</dt>
+	  <dd> <a href="https://degreed.com/learning#/search?term=JavaScript&type=video" target="_blank">Degreed</a></dd>
+	  <dd> <a href="https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/index.html" target="_blank">javaScript</a></dd>
+    <P><dt>Java</dt> 
+    <P><dt>Unix</dt>
+ </dl> 
+</div>
+
+
+</body>
+</html>
